@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - КороВет</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Підключення Tailwind CSS через CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3A5A40',
+                        'primary-hover': '#2c4431',
+                        secondary: '#A3B18A',
+                        accent: '#DDA15E',
+                        background: '#F9F8F6',
+                        surface: '#FFFFFF',
+                        'text-main': '#2C302E',
+                        'text-muted': '#848981',
+                        border: '#e0e0e0',
+                        error: '#E76F51',
+                    },
+                    fontFamily: {
+                        primary: ['Inter', 'system-ui', 'sans-serif'],
+                        heading: ['Raleway', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-bg flex flex-col min-h-screen justify-between bg-background text-text-main font-primary">
+    <a href="#main" class="skip-link">Перейти до основного контенту</a>
+
+    <div class="page-container w-full flex-grow flex flex-col">
+        <!-- Шапка (Header) -->
+        <header class="header">
+            <a href="index.html" class="logo flex items-center gap-3" aria-label="Головна сторінка КороВет">
+                <img src="Assets/icons/Лого.svg" alt="Логотип КороВет" class="logo-icon w-8 h-8 object-contain">
+                КороВет
+            </a>
+
+            <nav class="navigation" aria-label="Головне меню">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Головна</a></li>
+                    <li><a href="services.html" class="nav-link">Послуги</a></li>
+                    <li><a href="team.html" class="nav-link">Команда</a></li>
+                    <li><a href="packages.html" class="nav-link">Пакети</a></li>
+                    <li><a href="blog.html" class="nav-link">Блог</a></li>
+                    <li><a href="contacts.html" class="nav-link active">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <a href="index.html#urgent" class="btn-urgent">Термінова допомога &rarr;</a>
+        </header>
+
+        <main id="main" class="main-content inner-page flex-grow">
+            <section class="content-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="page-header-wrapper mb-10">
+                    <div class="page-header-text">
+                        <h1 class="section-title text-4xl font-bold font-heading">Зв'яжіться з нами</h1>
+                        <p class="section-description text-gray-600 mt-2">Ми завжди поруч, коли ваш улюбленець потребує допомоги. Зателефонуйте нам або завітайте до клініки.</p>
+                    </div>
+                </div>
+
+                <!-- Контактні картки -->
+                <div class="cards-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="card bg-surface border border-gray-200/80 rounded-2xl p-6 shadow-sm flex flex-col items-center text-center justify-between">
+                        <div>
+                            <i class="fas fa-map-marked-alt text-primary text-4xl mb-4" aria-hidden="true"></i>
+                            <h2 class="card-title text-xl font-bold text-gray-900 mb-2 font-heading">Наша адреса</h2>
+                            <p class="card-text text-gray-600 text-sm mb-4">Вул. певна, будинок 7<br>м. Львів, Україна</p>
+                        </div>
+                        <span class="card-price text-xs text-gray-500">Є зручна парковка для клієнтів</span>
+                    </article>
+
+                    <article class="card bg-surface border border-gray-200/80 rounded-2xl p-6 shadow-sm flex flex-col items-center text-center justify-between">
+                        <div>
+                            <i class="fas fa-phone-volume text-primary text-4xl mb-4" aria-hidden="true"></i>
+                            <h2 class="card-title text-xl font-bold text-gray-900 mb-2 font-heading">Телефони</h2>
+                            <p class="card-text text-gray-600 text-sm mb-4">
+                                <a href="tel:++380991234567" class="text-text-main font-bold text-lg hover:text-primary transition-colors">+380991234567</a><br>
+                                Багатоканальна лінія
+                            </p>
+                        </div>
+                        <span class="card-price text-error text-xs font-semibold flex items-center gap-1"><i class="fas fa-ambulance"></i> Екстрені виклики: цілодобово</span>
+                    </article>
+
+                    <article class="card bg-surface border border-gray-200/80 rounded-2xl p-6 shadow-sm flex flex-col items-center text-center justify-between">
+                        <div>
+                            <i class="far fa-clock text-primary text-4xl mb-4" aria-hidden="true"></i>
+                            <h2 class="card-title text-xl font-bold text-gray-900 mb-2 font-heading">Графік роботи</h2>
+                            <p class="card-text text-gray-600 text-sm mb-4">Понеділок - П'ятниця: 8:00 - 22:00<br>Субота - Неділя: 9:00 - 20:00</p>
+                        </div>
+                        <a href="#map" class="btn btn-secondary card-btn bg-secondary/20 hover:bg-secondary/30 text-primary font-semibold px-4 py-2.5 rounded-xl text-sm transition-all w-full text-center" aria-label="Перейти до карти проїзду">Прокласти маршрут</a>
+                    </article>
+                </div>
+
+                <!-- Семантична інтерактивна карта Google Maps (Львів) -->
+                <figure id="map" class="map-container" aria-label="Інтерактивна карта розташування ветеринарної клініки КороВет у місті Львів">
+                    <iframe class="map-frame"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82352.61053457223!2d23.94219597288674!3d49.83277864402324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7c0910b95b%3A0x22881b7655ab8063!2z0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua"
+                            title="Розташування клініки КороВет на карті міста Львів"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                    </iframe>
+                    <figcaption class="sr-only">Карта проїзду до клініки КороВет у місті Львів</figcaption>
+                </figure>
+                <!-- кінець коду секції Google Maps (Львів) -->
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="bg-gray-900 text-gray-300 pt-16 pb-12 border-t border-gray-800 w-full mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                    <div class="space-y-4">
+                        <a href="index.html" class="flex items-center gap-3 focus:outline-none rounded-lg p-1 w-fit">
+                            <img src="Assets/icons/Лого.svg" alt="Логотип КороВет" class="w-10 h-10 object-contain">
+                            <span class="text-2xl font-bold tracking-tight text-white font-heading">КороВет</span>
+                        </a>
+                        <p class="text-sm text-gray-400 leading-relaxed">Професійна турбота про ваших домашніх улюбленців. Сучасна діагностика, кваліфіковані лікарі та екстрена допомога 24/7.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold text-base mb-4 tracking-wide font-heading">Навігація</h3>
+                        <ul class="space-y-2.5 text-sm">
+                            <li><a href="index.html" class="hover:text-white transition-colors duration-200">Головна</a></li>
+                            <li><a href="services.html" class="hover:text-white transition-colors duration-200">Послуги</a></li>
+                            <li><a href="team.html" class="hover:text-white transition-colors duration-200">Наша команда</a></li>
+                            <li><a href="packages.html" class="hover:text-white transition-colors duration-200">Пакети</a></li>
+                            <li><a href="blog.html" class="hover:text-white transition-colors duration-200">Блог та поради</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold text-base mb-4 tracking-wide font-heading">Популярні послуги</h3>
+                        <ul class="space-y-2.5 text-sm">
+                            <li><a href="services.html" class="hover:text-white transition-colors duration-200">Первинний огляд терапевта</a></li>
+                            <li><a href="services.html" class="hover:text-white transition-colors duration-200">Комплексна вакцинація</a></li>
+                            <li><a href="services.html" class="hover:text-white transition-colors duration-200">Ультразвукова діагностика (УЗД)</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-white font-semibold text-base mb-4 tracking-wide font-heading">Контакти</h3>
+                        <address class="contacts space-y-2.5 text-sm text-gray-400 not-italic">
+                            <p class="contact-item flex items-center gap-2"><i class="fas fa-map-marker-alt text-primary" aria-hidden="true"></i> Вул. певна, будинок 7</p>
+                            <p class="contact-item flex items-center gap-2"><i class="fas fa-clock text-primary" aria-hidden="true"></i> Пн-Пт 8.00-22.00</p>
+                            <p class="contact-item flex items-center gap-2"><i class="fas fa-info-circle text-primary" aria-hidden="true"></i> Екстрені випадки: цілодобово</p>
+                            <p class="contact-item flex items-center gap-2"><i class="fas fa-phone-alt text-primary" aria-hidden="true"></i> <a href="tel:++380991234567" class="hover:text-white transition-colors">+380991234567</a></p>
+                        </address>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                    <small class="copyright">&copy; КороВет 2026-2026. Усі права захищені.</small>
+                    <div class="flex gap-6 mt-4 sm:mt-0">
+                        <a href="contacts.html" class="hover:text-gray-400 transition-colors">Політика конфіденційності</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

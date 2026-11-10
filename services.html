@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Послуги - КороВет</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Підключення Tailwind CSS через CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3A5A40',
+                        'primary-hover': '#2c4431',
+                        secondary: '#A3B18A',
+                        accent: '#DDA15E',
+                        background: '#F9F8F6',
+                        surface: '#FFFFFF',
+                        'text-main': '#2C302E',
+                        'text-muted': '#848981',
+                        border: '#e0e0e0',
+                        error: '#E76F51',
+                    },
+                    fontFamily: {
+                        primary: ['Inter', 'system-ui', 'sans-serif'],
+                        heading: ['Raleway', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- Додано inner-bg, щоб повністю прибрати фонову картинку собаки/кота -->
+<body class="inner-bg flex flex-col min-h-screen justify-between bg-background text-text-main font-primary">
+    <a href="#main" class="skip-link">Перейти до основного контенту</a>
+
+    <div class="page-container w-full flex-grow flex flex-col">
+        <!-- Шапка (Header) -->
+        <header class="header">
+            <a href="index.html" class="logo flex items-center gap-3" aria-label="Головна сторінка КороВет">
+                <img src="Assets/icons/Лого.svg" alt="Логотип КороВет" class="logo-icon w-8 h-8 object-contain">
+                КороВет
+            </a>
+
+            <!-- Повна навігація з пунктом "Головна" -->
+            <nav class="navigation" aria-label="Головне меню">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Головна</a></li>
+                    <li><a href="services.html" class="nav-link active">Послуги</a></li>
+                    <li><a href="team.html" class="nav-link">Команда</a></li>
+                    <li><a href="packages.html" class="nav-link">Пакети</a></li>
+                    <li><a href="blog.html" class="nav-link">Блог</a></li>
+                    <li><a href="contacts.html" class="nav-link">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <a href="index.html#urgent" class="btn-urgent">Термінова допомога &rarr;</a>
+        </header>
+
+        <main id="main" class="main-content inner-page flex-grow">
+            <section class="content-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="page-header-wrapper flex justify-between items-center mb-10">
+                    <div class="page-header-text">
+                        <h1 class="section-title text-4xl font-bold font-heading">Наші послуги</h1>
+                        <p class="section-description text-gray-600 mt-2">Оберіть необхідну послугу для вашого улюбленця.</p>
+                    </div>
+                    <img src="Assets/icons/Іконка 1.svg" alt="" aria-hidden="true" class="page-decor-icon w-16 h-16 object-contain hidden sm:block">
+                </div>
+
+                <div class="cards-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="card bg-surface border border-gray-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <h2 class="card-title text-xl font-bold text-gray-900 mb-2 font-heading"><i class="fas fa-stethoscope icon text-primary mr-2" aria-hidden="true"></i> Первинний огляд терапевта</h2>
+                            <p class="card-text text-gray-600 text-sm mb-6">Базовий огляд тварини, збір анамнезу, вимірювання температури та ваги.</p>
+                        </div>
+                        <div class="card-footer flex items-center justify-between pt-4 border-t border-gray-100">
+                            <span class="card-price font-semibold text-primary">від 500 грн • 30 хв</span>
+                            <button type="button" class="btn btn-primary card-btn bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all" aria-label="Записатися на первинний огляд терапевта">Записатися</button>
+                        </div>
+                    </article>
+
+                    <article class="card bg-surface border border-gray-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <h2 class="card-title text-xl font-bold text-gray-900 mb-2 font-heading"><i class="fas fa-syringe icon text-primary mr-2" aria-hidden="true"></i> Вакцинація комплексна</h2>
+                            <p class="card-text text-gray-600 text-sm mb-6">Захист від основних інфекційних захворювань. Включає огляд лікаря.</p>
+                        </div>
+                        <div class="card-footer flex items-center justify-between pt-4 border-t border-gray-100">
+                            <span class="card-price font-semibold text-primary">від 800 грн • 20 хв</span>
+                            <button type="button" class="btn btn-primary card-btn bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all" aria-label="Записатися на комплексну вакцинацію">Записатися</button>
+                        </div>
+                    </article>
+
+                    <article class="card bg-surface border border-gray-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <h2 class="card-title text-xl font-bold text-gray-900 mb-2 font-heading"><i class="fas fa-heartbeat icon text-primary mr-2" aria-hidden="true"></i> УЗД черевної порожнини</h2>
+                            <p class="card-text text-gray-600 text-sm mb-6">Детальна діагностика внутрішніх органів за допомогою сучасного обладнання.</p>
+                        </div>
+                        <div class="card-footer flex items-center justify-between pt-4 border-t border-gray-100">
+                            <span class="card-price font-semibold text-primary">від 950 грн • 40 хв</span>
+                            <button type="button" class="btn btn-primary card-btn bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all" aria-label="Записатися на УЗД черевної порожнини">Записатися</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Семантична секція відеоплеєра -->
+                <figure class="video-container" aria-label="Відеопрезентація ветеринарних послуг клініки КороВет">
+                    <iframe class="video-frame"
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="Оглядове відео про послуги клініки КороВет"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                    </iframe>
+                    <figcaption class="sr-only">Оглядове відео про стандарти та підхід клініки КороВет</figcaption>
+                </figure>
+                <!-- Закінчення секції відеоплеєра -->
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="bg-gray-900 text-gray-300 pt-16 pb-12 border-t border-gray-800 w-full mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                    <div class="space-y-4">
+                        <a href="index.html" class="flex items-center gap-3 focus:outline-none rounded-lg p-1 w-fit">
+                            <img src="Assets/icons/Лого.svg" alt="Логотип КороВет" class="w-10 h-10 object-contain">
+                            <span class="text-2xl font-bold tracking-tight text-white font-heading">КороВет</span>
+                        </a>
+                        <p class="text-sm text-gray-400 leading-relaxed">Професійна турбота про ваших домашніх улюбленців. Сучасна діагностика, кваліфіковані лікарі та екстрена допомога 24/7.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold text-base mb-4 tracking-wide font-heading">Навігація</h3>
+                        <ul class="space-y-2.5 text-sm">
+                            <li><a href="index.html" class="hover:text-white transition-colors duration-200">Головна</a></li>
+                            <li><a href="services.html" class="hover:text-white transition-colors duration-200">Послуги</a></li>
+                            <li><a href="team.html" class="hover:text-white transition-colors duration-200">Наша команда</a></li>
+                            <li><a href="packages.html" class="hover:text-white transition-colors duration-200">Пакети</a></li>
+                            <li><a href="blog.html" class="hover:text-white transition-colors duration-200">Блог та поради</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold text-base mb-4 tracking-wide font-heading">Популярні послуги</h3>
+                        <ul class="space-y-2.5 text-sm">
+                            <li><a href="services.html" class="hover:text-white transition-colors duration-200">Первинний огляд терапевта</a></li>
+                            <li><a href="services.html" class="hover:text-white transition-colors duration-200">Комплексна вакцинація</a></li>
+                            <li><a href="services.html" class="hover:text-white transition-colors duration-200">Ультразвукова діагностика (УЗД)</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-white font-semibold text-base mb-4 tracking-wide font-heading">Контакти</h3>
+                        <address class="contacts space-y-2.5 text-sm text-gray-400 not-italic">
+                            <p class="contact-item flex items-center gap-2"><i class="fas fa-map-marker-alt text-primary" aria-hidden="true"></i> Вул. певна, будинок 7</p>
+                            <p class="contact-item flex items-center gap-2"><i class="fas fa-clock text-primary" aria-hidden="true"></i> Пн-Пт 8.00-22.00</p>
+                            <p class="contact-item flex items-center gap-2"><i class="fas fa-info-circle text-primary" aria-hidden="true"></i> Екстрені випадки: цілодобово</p>
+                            <p class="contact-item flex items-center gap-2"><i class="fas fa-phone-alt text-primary" aria-hidden="true"></i> <a href="tel:+380900000000" class="hover:text-white transition-colors">+380 9##84#2##</a></p>
+                        </address>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                    <small class="copyright">&copy; КороВет 2026-2026. Усі права захищені.</small>
+                    <div class="flex gap-6 mt-4 sm:mt-0">
+                        <a href="contacts.html" class="hover:text-gray-400 transition-colors">Політика конфіденційності</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
