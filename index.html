@@ -287,16 +287,54 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-text-main mb-8 text-center font-heading">
                     Галерея клініки
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <a href="Assets/images/Hero-section.webp" data-fancybox="clinic-gallery" data-caption="Оглядовий кабінет клініки КороВет" class="block overflow-hidden rounded-xl shadow-sm">
-                        <img src="Assets/images/Hero-section.webp" alt="Оглядовий кабінет" class="w-full h-60 object-cover hover:scale-[1.03] transition duration-300 cursor-zoom-in">
-                    </a>
-                    <a href="Assets/images/Hero-section.webp" data-fancybox="clinic-gallery" data-caption="Діагностика та профілактика" class="block overflow-hidden rounded-xl shadow-sm">
-                        <img src="Assets/images/Hero-section.webp" alt="Діагностика та профілактика" class="w-full h-60 object-cover hover:scale-[1.03] transition duration-300 cursor-zoom-in">
-                    </a>
-                    <a href="Assets/images/Hero-section.webp" data-fancybox="clinic-gallery" data-caption="Комфортні умови для улюбленців" class="block overflow-hidden rounded-xl shadow-sm">
-                        <img src="Assets/images/Hero-section.webp" alt="Комфортні умови" class="w-full h-60 object-cover hover:scale-[1.03] transition duration-300 cursor-zoom-in">
-                    </a>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <figure class="group overflow-hidden rounded-xl border border-border/50 bg-background shadow-sm transition hover:shadow-md">
+                        <a href="Assets/images/gallery-1.webp"
+                           data-fancybox="clinic-gallery"
+                           data-caption="Оглядовий кабінет клініки КороВет"
+                           class="block relative aspect-[3/2] overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                            <img src="Assets/images/gallery-1.webp"
+                                 alt="Ветеринарний лікар оглядає золотистого ретривера в оглядовому кабінеті клініки КороВет"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover object-center transition duration-300 group-hover:scale-105 cursor-zoom-in">
+                        </a>
+                        <figcaption class="px-4 py-3 text-sm font-medium text-text-main text-center">
+                            Оглядовий кабінет
+                        </figcaption>
+                    </figure>
+
+                    <figure class="group overflow-hidden rounded-xl border border-border/50 bg-background shadow-sm transition hover:shadow-md">
+                        <a href="Assets/images/gallery-2.webp"
+                           data-fancybox="clinic-gallery"
+                           data-caption="Комфортні умови для улюбленців та їхніх власників"
+                           class="block relative aspect-[3/2] overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                            <img src="Assets/images/gallery-2.webp"
+                                 alt="Власниця з котом у затишній зоні очікування ветеринарної клініки КороВет"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover object-center transition duration-300 group-hover:scale-105 cursor-zoom-in">
+                        </a>
+                        <figcaption class="px-4 py-3 text-sm font-medium text-text-main text-center">
+                            Комфортні умови
+                        </figcaption>
+                    </figure>
+
+                    <figure class="group overflow-hidden rounded-xl border border-border/50 bg-background shadow-sm transition hover:shadow-md sm:col-span-2 lg:col-span-1">
+                        <a href="Assets/images/gallery-3.webp"
+                           data-fancybox="clinic-gallery"
+                           data-caption="Сучасна діагностика та лабораторні дослідження"
+                           class="block relative aspect-[3/2] overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                            <img src="Assets/images/gallery-3.webp"
+                                 alt="Лікар проводить лабораторне дослідження під мікроскопом поруч з УЗД-апаратом у клініці КороВет"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover object-center transition duration-300 group-hover:scale-105 cursor-zoom-in">
+                        </a>
+                        <figcaption class="px-4 py-3 text-sm font-medium text-text-main text-center">
+                            Діагностика та лабораторія
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
